@@ -3,6 +3,7 @@ import Table from "./components/table";
 import { calculateAmortization } from "./helpers";
 import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
+import "./App.css"
 
 const App = () => {
   const [amount, setAmount] = useState(0);
@@ -68,7 +69,9 @@ const App = () => {
           </button>
         </div>
         <div className="col-6">
+          <div className="table-container">
           <Table payments={payments}/>
+          </div>
         </div>
       </div>
     </div>
