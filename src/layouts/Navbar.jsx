@@ -21,10 +21,10 @@ const Navbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#main">Depreciacion</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contactos</a></li>
-              <li class="nav-item"><a class="nav-link" href="https://goo.gl/maps/9HaN4pfzGLhcEMna9" target="_blank">Direccion</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://goo.gl/maps/9HaN4pfzGLhcEMna9">Direccion</a></li>
             </ul>
           </div>
         </nav>
