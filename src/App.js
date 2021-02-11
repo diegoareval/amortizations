@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Table from "./components/table";
 import { calculateAmortization } from "./helpers";
+import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
   return (
     <>
     <Navbar/>
-    <div className="container">
+    <div className="container" style={{marginTop: "9vh"}}>
       <div className="row mt-3">
         <div className="col-6">
           <h2>Calcular amortización</h2>
@@ -71,6 +72,7 @@ const App = () => {
         </div>
       </div>
     </div>
+    <Footer/>
     </>
   );
 };

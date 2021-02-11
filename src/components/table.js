@@ -1,8 +1,9 @@
 import React from "react";
 
+
 const Table = ({ payments }) => {
   return (
-    <table className="table table-striped">
+    <table className="table table-striped table-fixed">
       <thead className="thead-dark">
         <tr>
           <th>Fecha</th>
