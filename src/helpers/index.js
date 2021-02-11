@@ -40,3 +40,9 @@ export const calculateAmortization = (monto = 0, interes = 0, tiempo = 0) => {
     reject([]);
   });
 }
+
+export const getSum = (array = [], column) =>{
+  if(array && array.length<=0) return 0;
+  let values = array.map((item) => parseFloat(item[column]) || 0)
+  return values.reduce((a, b) => a + b)
+}

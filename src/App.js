@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Table from "./components/table";
-import { calculateAmortization } from "./helpers";
+import { calculateAmortization, getSum } from "./helpers";
 import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
 import "./App.css"
@@ -20,6 +20,7 @@ const App = () => {
     .catch(error => { console.log(error); });
   }
  
+
 
   return (
     <>
@@ -71,6 +72,14 @@ const App = () => {
         <div className="col-6">
           <div className="table-container">
           <Table payments={payments}/>
+          </div>
+          <div>
+          <div>
+            Total a pagar: {parseFloat(getSum(payments, "share")).toFixed(2)}
+          </div>
+          <div>
+            Total Intereses: {parseFloat(getSum(payments, "rate")).toFixed(2)}
+          </div>
           </div>
         </div>
       </div>
