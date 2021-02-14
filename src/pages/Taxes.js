@@ -51,7 +51,7 @@ const Taxes = () => {
         </div>
         <div className="col-6">
           {results && (
-            <div className="d-flex">
+            <div style={{ marginTop:"40px"}}>
               <div style={{marginRight:"10px"}}>Resultados:</div>
               <div>
               <div>Monto: {amount || 0}</div>
