@@ -1,15 +1,16 @@
 import React from 'react'
 import "./navbar.css"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav-bar">
-          <a class="navbar-brand" rel="home" href="#home" title="MaxOff furnitures">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="nav-bar">
+          <a className="navbar-brand" rel="home" href="#home" title="MaxOff furnitures">
             <img style={{maxWidth: "80%", width:"100px", height:"50px"}} alt="img" src="https://www.contamoney.com/wp-content/uploads/2014/04/contabilidad-gestorias.png" id="header-img"/>
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -17,14 +18,14 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#main">Depreciacion</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact">Contactos</a></li>
-              <li class="nav-item"><a class="nav-link" href="https://goo.gl/maps/9HaN4pfzGLhcEMna9">Direccion</a></li>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item active"><Link className="nav-link" to="/">Home</Link></li>
+              <li className="nav-item"> <Link className="nav-link" to="/depreciation">Depreciation</Link></li>
+              <li className="nav-item"> <Link to="/taxes" className="nav-link">Taxes</Link></li>
+              <li className="nav-item"> <Link to="/contacts" className="nav-link">Contacts</Link></li>
             </ul>
           </div>
         </nav>
