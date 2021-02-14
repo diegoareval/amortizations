@@ -28,7 +28,7 @@ const Home = () => {
     <>
       <div className="container" style={{ marginTop: "10vh" }}>
         <div className="row mt-3">
-          <div className="col-6">
+          <div className="col-6 sm-col-12">
             <h2>Calcular amortización</h2>
             <Input
               value={amount}
@@ -56,7 +56,7 @@ const Home = () => {
               Calcular
             </button>
           </div>
-          <div className="col-6">
+          <div className="col-6 col-sm-12">
             <div className="table-container">
               <Table payments={payments} />
             </div>
