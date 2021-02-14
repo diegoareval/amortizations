@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container" style={{ marginTop: "9vh" }}>
+      <div className="container" style={{ marginTop: "10vh" }}>
         <div className="row mt-3">
           <div className="col-6">
             <h2>Calcular amortización</h2>

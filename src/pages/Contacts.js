@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contacts = () => {
     return (
-        <div>
+        <div className="container" style={{ marginTop: "10vh" }}>
             contactos
         </div>
     )
