@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Input from "../shared/Input";
 
 const Taxes = () => {
-  const [amount, setAmount] = useState(0);
-  const [percent, setPercent] = useState(0);
+  const [amount, setAmount] = useState(null);
+  const [percent, setPercent] = useState(null);
   const [results, setResults] = useState(null);
   const calculateIVA = () => {
     if (isNaN(amount) || isNaN(percent)) return;

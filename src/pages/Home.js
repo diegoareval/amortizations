@@ -6,9 +6,9 @@ import "./home.css";
 
 
 const Home = () => {
-  const [amount, setAmount] = useState(0);
-  const [time, setTime] = useState(0);
-  const [rate, setRate] = useState(0);
+  const [amount, setAmount] = useState(null);
+  const [time, setTime] = useState(null);
+  const [rate, setRate] = useState(null);
   const [payments, setPayments] = useState([]);
 
   const calcularCuota = () => {
@@ -40,7 +40,7 @@ const Home = () => {
               value={time}
               label="Tiempo"
               onChange={setTime}
-              placeholder="Ingresa tiempo"
+              placeholder="Ingresa tiempo en meses"
             />
             <Input
               value={rate}
