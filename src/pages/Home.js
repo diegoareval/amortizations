@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Table from "../components/table";
 import { calculateAmortization, getSum } from "../helpers";
-import Footer from "../layouts/Footer";
 import Input from "../shared/Input";
 import "./home.css";
 
