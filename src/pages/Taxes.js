@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ALERT_TYPES, smallAlert } from "../lib/alert";
 import Input from "../shared/Input";
 
 const Taxes = () => {
@@ -6,8 +7,14 @@ const Taxes = () => {
   const [percent, setPercent] = useState(null);
   const [results, setResults] = useState(null);
   const calculateIVA = () => {
-    if (isNaN(amount) || isNaN(percent)) return;
-    if (percent <= 0) return;
+    if (isNaN(amount) || !amount){
+        smallAlert(ALERT_TYPES.INFO, "debes ingresar valores validos");
+        return;
+    }
+    if (percent <= 0) {
+        smallAlert(ALERT_TYPES.INFO, "Debes ingresar un porcentaje basado en intervalos validos")
+        return;
+    }
     const percentValue = parseFloat(percent) / 100;
     const iva = parseFloat(amount) * parseFloat(percentValue);
     const ntotal = parseFloat(amount) + parseFloat(iva);

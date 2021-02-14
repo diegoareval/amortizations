@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Table from "../components/table";
 import { calculateAmortization, getSum } from "../helpers";
+import { ALERT_TYPES, smallAlert } from "../lib/alert";
 import Input from "../shared/Input";
 import "./home.css";
 
@@ -12,9 +13,18 @@ const Home = () => {
   const [payments, setPayments] = useState([]);
 
   const calcularCuota = () => {
-    if (amount <= 0) return;
-    if (rate <= 0) return;
-    if (time <= 0 || time > 100) return;
+    if (amount <= 0) {
+        smallAlert(ALERT_TYPES.INFO, "Debes ingresar un monto valido");
+        return;
+    }
+    if (rate <= 0) {
+        smallAlert(ALERT_TYPES.INFO, "Debes ingresar una taza de interes valida");
+        return;
+    }
+    if (time <= 0 || time > 100) {
+        smallAlert(ALERT_TYPES.INFO, "Debes ingresar un tiempo en meses valido");
+        return;
+    }
     calculateAmortization(amount, rate, time)
       .then((result) => {
         setPayments(result);
